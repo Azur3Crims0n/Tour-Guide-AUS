@@ -1,0 +1,99 @@
+body{
+    text-align: center;
+    color: #88CCFF;
+    background-color: rgb(34, 99, 107); 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+p header{
+    border-color: #669999;
+    border-width: 5px;
+    text-size-adjust: 20px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+.ulstuff {
+    list-style-type: none;
+    margin: -10px;
+    padding: 0;
+}
+
+.center {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 4px;
+    left: 4px;
+    background: rgba(255, 255, 255, 1);
+    overflow-x: hidden;
+    padding: 8px 0;
+    overflow: hidden;
+    border: solid rgba(0,0,0,0.7)
+}
+
+li a:hover {
+    background-color: rgba(84, 94, 141, 0.5);
+}
+
+li a:link {
+    color: rgb(108, 144, 155);
+}
+
+li a:visited {
+    color: rgb(108, 144, 155);
+}
+
+.nava {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+}
+
+.active {
+    background-color: rgba(120, 226, 161, 0.322)
+}
+
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    height: 15%;
+}
+
+.border {
+    border: 2px solid cadetblue;
+    border-radius: 25px
+}
+
+.sidespace {
+    margin-left:135px;
+    margin-right:135px;
+}
+
+.t2img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 250px;
+}
+
+footer {
+    margin-top:25px;
+    border: 3px dotted cadetblue;
+    border-radius: 35px
+}
