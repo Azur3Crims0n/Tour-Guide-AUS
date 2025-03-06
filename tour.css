@@ -3,12 +3,13 @@ body{
     color: #88CCFF;
     background-color: rgb(34, 99, 107); 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    font-size: large;
+    overflow-x:hidden;
 }
 
 p header{
     border-color: #669999;
     border-width: 5px;
-    text-size-adjust: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -70,8 +71,8 @@ li a:visited {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 15%;
-    height: 15%;
+    width: 1900px;
+    height: 850px;
 }
 
 .border {
@@ -96,4 +97,37 @@ footer {
     margin-top:25px;
     border: 3px dotted cadetblue;
     border-radius: 35px
+}
+
+.textbg {
+    background-color: #669999;
+    padding:5px;
+}
+
+.t3txtscale {
+    margin-left:150px;
+    margin-right:150px;
+    font-size:25px;
+}
+
+.t4img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.t4img2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+.grade {
+    background-color: rgba(0,0,0,0);
+    background-image: linear-gradient(rgb(32, 65, 95), rgb(44, 190, 226), rgb(98, 173, 192), rgba(74, 99, 146,0.89))
+}
+
+.slock {
+    overflow:hidden;
 }

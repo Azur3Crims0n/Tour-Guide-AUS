@@ -5,33 +5,118 @@
 	<title>Tour Package - Home</title>
 	<link rel="stylesheet" type="text/css" href="tour.css">
 </head>
-<body>
+<body class="grade slock">
 	<nav>
+            <!-- navbar -->
         <ul class="ulstuff">
             <li><a class="nava" href="tour1.html">Home</a></li>
             <li><a class="nava" href="tour2.html">History</a></li>
             <li><a class="nava" href="tour3.html">Landmarks</a></li>
-            <li><a class="nava" href="tour4.html">page four</a></li>
-			<li><a class="nava active" href="tour5.html">page five</a></li>
+            <li><a class="nava" href="tour4.html">Hotels</a></li>
+			<li><a class="nava active" href="tour5.html">Register For A Tour</a></li>
 			<li><a class="nava" href="tour6.html">About Us!</a></li>
         </ul>
     </nav>
 <header>
 </header>
 
+    <h1 class="center">Tour Package Registration</h1>
 
+ <!-- Update the form's action to handle via JavaScript -->
+ <form id="tourForm" onsubmit="processForm(event)">
 
+    <!-- First and Last Name fields -->
+    <label for="first">First Name:</label>
+    <input type="text" id="first" name="first" required>
+    <label for="last">Last Name:</label>
+    <input type="text" id="last" name="last" required>
+    <br><br>
 
+    <!-- Number of People in party -->
+    <label for="party">Number of People in Party:</label>
+    <select id="party" name="party">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br><br>
 
+    <!-- Select Tour Package -->
+    <label for="tour">Select City Tour Package:</label>
+    <select id="tour" name="tour">
+        <option value="sydney">Sydney</option>
+        <option value="brisbane">Brisbane</option>
+        <option value="melbourne">Melbourne</option>
+        <option value="surfers">Surfers Paradise</option>
+        <option value="perth">Perth</option>
+    </select>
+    <br><br>
 
+    <!-- Air Travel (Radio buttons) -->
+    <label>Include Air Travel:</label><br>
+    <input type="radio" id="yes" name="airline" value="yes">
+    <label for="yes">Yes</label>
+    <input type="radio" id="no" name="airline" value="no">
+    <label for="no">No</label>
+    <br><br>
 
+    <!-- Additional Options (Checkboxes) -->
+    <label><input type="checkbox" name="meals"> Meals</label><br>
+    <label><input type="checkbox" name="wine"> Evening Wine</label><br>
+    <label><input type="checkbox" name="car"> Car Rental</label>
+    <br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Process Request">
+</form>
+
+<!-- Div to display form results -->
+<div class="textbg border" id="formResult" style="margin-top: 20px;"></div>
+
+<script>
+    function processForm(event) {
+        // Prevent the form from submitting and reloading the page
+        event.preventDefault();
+
+        // Collect form data
+        const form = document.getElementById('tourForm');
+        const formData = new FormData(form);
+
+        // Prepare the results to display
+        let resultHTML = "<h2>Tour Package Confirmation</h2>";
+
+        formData.forEach((value, key) => {
+            if (key === 'first') {
+                resultHTML += `<p><strong>First Name:</strong> ${value}</p>`;
+            } else if (key === 'last') {
+                resultHTML += `<p><strong>Last Name:</strong> ${value}</p>`;
+            } else if (key === 'party') {
+                resultHTML += `<p><strong>Number of People in Party:</strong> ${value}</p>`;
+            } else if (key === 'tour') {
+                resultHTML += `<p><strong>Tour Package:</strong> ${value}</p>`;
+            } else if (key === 'airline') {
+                resultHTML += `<p><strong>Include Air Travel:</strong> ${value}</p>`;
+            } else if (key === 'meals') {
+                resultHTML += `<p><strong>Meals Included:</strong> ${value === 'on' ? 'Yes' : 'No'}</p>`;
+            } else if (key === 'wine') {
+                resultHTML += `<p><strong>Evening Wine Included:</strong> ${value === 'on' ? 'Yes' : 'No'}</p>`;
+            } else if (key === 'car') {
+                resultHTML += `<p><strong>Car Rental Included:</strong> ${value === 'on' ? 'Yes' : 'No'}</p>`;
+            }
+        });
+
+        // Display the results in the formResult div
+        document.getElementById('formResult').innerHTML = resultHTML;
+    }
+</script>
 
 <footer>
 	<p>
         Made by Trevon Culpepper, Charles Phelps, Brendon Warren. &#169;2025
     </p>
 </footer>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 </body>
 </html>
